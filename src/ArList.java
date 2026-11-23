@@ -41,7 +41,7 @@ public class ArList<T> {
         if(index < 0 || index >=size) throw new IndexOutOfBoundsException("Индекс превышает границу");
 
         data[index] = null;
-        System.arraycopy(data,index,data,index+1, size-index);
+        System.arraycopy(data,index+1,data,index, size-index+1);
         size--;
     }
 
